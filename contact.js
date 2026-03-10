@@ -10,8 +10,8 @@ function validateForm() {
         return; 
     }
 
-    if (!email.includes("@gmail.com")) {
-        alert("Please enter a valid email!");
+    if (!email.endsWith("@gmail.com")) {
+        alert("Please enter a valid Gmail address (it must end with @gmail.com)!");
         return;
     }
 
