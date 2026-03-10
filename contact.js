@@ -10,13 +10,13 @@ function validateForm() {
         return; 
     }
 
-    if (!email.includes("@")) {
+    if (!email.includes("@gmail.com")) {
         alert("Please enter a valid email!");
         return;
     }
 
-    if (age < 1 || age > 120) {
-        alert("Age must be between 1 and 120!");
+    if (age < 15 || age > 120) {
+        alert("Age must be between 15 and 120!");
         return;
     }
 
