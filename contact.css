@@ -25,10 +25,9 @@ html, body {
     align-items: center;
 }
 
-/* ========== TYPOGRAPHY ========== */
-h2 {
-    font-size: 30px;
-    font-family: 'Press Start 2P', monospace;
+/* ========== PISKAOT ========== */
+a{
+    color: white;
 }
 
 h3 {
@@ -111,7 +110,7 @@ main {
     flex: 1;
     padding: 20px 0;
 }
-
+/* ========== FORM ========== */
 #Form{
     background: #111;
     color: #e0e0e0;
@@ -121,6 +120,49 @@ main {
     width: 100%;
     max-width: 600px;
 }
+
+#Form h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Nosifer', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(180deg, #8B0000 0%, #ff0000 50%, #4a0000 100%);
+    background-size: 100% 200%;   
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;    
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.9));
+    animation: ooze 3s ease-in-out infinite;
+}
+
+@keyframes ooze {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+#myForm label{
+     font-size: 23px;
+    font-family: 'Jersey 10', monospace;
+    text-transform: uppercase;
+}
+
+.contact_us a{
+    transition: color 0.3s ease;
+}
+
+.contact_us a:hover {
+    color: red;
+}
+
 /* ========== FOOTER ========== */
 footer {
     background: #000;
