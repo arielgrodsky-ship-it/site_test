@@ -10,8 +10,9 @@ function validateForm() {
         return; 
     }
 
-    if (!email.endsWith("@gmail.com")) {
-        alert("Please enter a valid Gmail address (it must end with @gmail.com)!");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address!");
         return;
     }
 
@@ -20,9 +21,9 @@ function validateForm() {
         return;
     }
 
-    const phonePattern = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/; 
+    const phonePattern = /^[0-9]{10}$/; 
     if (!phonePattern.test(phone)) {
-        alert("Please enter a valid phone number (e.g., 050-123-4567)!");
+        alert("Please enter a valid 10-digit phone number (e.g., 0501234567)!");
         return;
     }
 
