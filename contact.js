@@ -22,7 +22,7 @@ function validateForm() {
         return;
     }
 
-    const gmailPattern = /^(?!*\.\.)[a-zA-Z0-9][a-zA-Z0-9.][a-zA-Z0-9]@gmail\.com$/;
+    const gmailPattern = /^(?!.*\.\.)[a-zA-Z0-9][a-zA-Z0-9.]{4,28}[a-zA-Z0-9]@gmail\.com$/;
     if (!gmailPattern.test(email)) {
         alert("Invalid Gmail address! Make sure it ends with @gmail.com");
         return;
@@ -41,7 +41,7 @@ function validateForm() {
 
     const phonePattern = /^[0-9]{10}$/; 
     if (!phonePattern.test(phone)) {
-        alert("Please enter a valid phone number!");
+        alert("Please enter a valid 10-digit phone number!");
         return;
     }
 
