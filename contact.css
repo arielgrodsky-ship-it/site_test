@@ -128,6 +128,7 @@ main {
     font-family: 'Nosifer', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+    /*=============== gemini help============== */
     background: linear-gradient(180deg, #8B0000 0%, #ff0000 50%, #4a0000 100%);
     background-size: 100% 200%;   
     -webkit-background-clip: text;
@@ -148,7 +149,45 @@ main {
         background-position: 50% 0%;
     }
 }
+/* Styling the Submit Button */
+#submitBtn {
+    background-color: #8b0000; 
+    color: white;
+    font-family: 'Press Start 2P', cursive; 
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.7);
+    margin-top: 20px;
+}
 
+
+#submitBtn:hover {
+    background-color: #ff0000; 
+    color: black;
+    box-shadow: 0 0 25px #ff0000, inset 0 0 15px #8b0000;
+    transform: scale(1.05);
+}
+
+.form_select {
+    background-color: #181818; 
+    color: white; 
+    border: 2px solid #8b0000; 
+    border-radius: 5px; 
+    padding: 10px; 
+    font-family: Arial, sans-serif; 
+}
+
+
+.form_select:focus {
+    outline: none; 
+    border-color: #ff0000; 
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); 
+}
 #myForm label{
      font-size: 23px;
     font-family: 'Jersey 10', monospace;
@@ -161,6 +200,16 @@ main {
 
 .contact_us a:hover {
     color: red;
+}
+
+.contact_us {
+    text-align: center;
+    margin: 5px 0; 
+}
+
+.contact_info {
+    text-decoration: underline; 
+    margin-left: 20px;
 }
 
 /* ========== FOOTER ========== */
@@ -213,15 +262,6 @@ footer {
 
 .img_foot {
     width: 60%;
-}
-.contact_us {
-    text-align: center;
-    margin: 5px 0; 
-}
-
-.contact_info {
-    text-decoration: underline; 
-    margin-left: 20px;
 }
 
 #rights {
