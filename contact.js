@@ -22,17 +22,10 @@ function validateForm() {
         return;
     }
 
-    // FIXED: Removed the extra '*' and fixed the dots
-    const gmailPattern = /^(?!.*\.\.)[a-zA-Z0-9][a-zA-Z0-9.]{4,28}[a-zA-Z0-9]@gmail\.com$/;
-    if (!gmailPattern.test(email)) {
-        alert("Invalid Gmail address! Make sure it ends with @gmail.com");
-        return;
-    }
 
-    // FIXED: Cleaned up the syntax error here
-    const numberCheck = /[0-9]/;
-    if (numberCheck.test(email)) {
-        alert("Your email cannot contain numbers! Letters only, please.");
+    const basicEmailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!basicEmailPattern.test(email)) {
+        alert("Invalid email! Make sure it contains an @ and .");
         return;
     }
 
@@ -41,7 +34,6 @@ function validateForm() {
         return;
     }
 
-    // FIXED: Pattern to match exactly 10 digits
     const phonePattern = /^[0-9]{10}$/; 
     if (!phonePattern.test(phone)) {
         alert("Please enter a valid 10-digit phone number!");
