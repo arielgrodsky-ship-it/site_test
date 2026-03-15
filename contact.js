@@ -4,6 +4,7 @@ function validateForm() {
     const age = document.getElementById("age").value;
     const phone = document.getElementById("Tel").value;
     const issue = document.getElementById("Issue").value;
+    const issueText = document.getElementById("message").value;
 
     const usernamePattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_]+$/;
 
@@ -45,5 +46,27 @@ function validateForm() {
         return;
     }
 
-    alert("Everything looks good!");
+    const submitBtn = document.getElementById("submitBtn");
+
+    // GET – שולח בקשה עם נתונים ב-URL
+    submitBtn.addEventListener("click", () => {
+        fetch("http://localhost:3000/get?username=" + username + "&email=" + email + "&age=" + age + "&phone=" + phone + "&issue=" + issue + "&issueText=" + issueText)
+            .then(res => res.text())
+            .then(data => alert(data))
+            .catch(err => console.error(err));
+    });
+
+    // POST – שולח בקשה עם נתונים בגוף הבקשה
+    submitBtn.addEventListener("click", () => {
+        fetch("http://localhost:3000/post", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ name: username, email: email , phone: phone})
+        })
+        .then(res => res.text())
+        .then(data => alert(data))
+        .catch(err => console.error(err));
+});
 }
